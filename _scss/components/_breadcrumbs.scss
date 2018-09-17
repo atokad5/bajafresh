@@ -1,0 +1,50 @@
+.breadcrumbs {
+  margin-left: 0em;
+  padding: 1em 0em 0em 0em;
+  margin-top: 0em;
+  li {
+    display: inline-block;
+    font-size: 0.7em;
+
+    &:last-of-type {
+      a {
+        color: $orange;
+      }
+      color: $orange;
+      svg {
+        stroke: $orange;
+      }
+    }
+  }
+  .li-elements {
+    display: flex;
+    align-items: center;
+    &:hover {
+      svg {
+        stroke: $orange;
+      }
+    }
+  }
+  a {
+    color: $blue;
+    text-decoration: none;
+    &:hover {
+      color: $orange;
+      
+    }
+  }
+  svg {
+    margin-left: 2px;
+    stroke: #999;
+  }
+}
+
+
+@media(min-width: $bp-md) {
+  .breadcrumbs {
+    padding: 1em 0em;
+  }
+  #bread {
+    background: #eee;
+  }
+}
