@@ -3,7 +3,7 @@ get_header();
 $root = get_template_directory_uri();
 $user = $_GET['firstname']
 ;?>
-<section class="form-landing">
+<section class="form-landing form-field_landing-test">
   <div class="is-form-el left-image-side">
     <div class="baja-logo desktop">
       <img src="<?php echo "$root/_assets/images/bbf-white.png" ; ?> " alt="">
