@@ -10469,11 +10469,11 @@ var _form = __webpack_require__(7);
 
 var _form2 = _interopRequireDefault(_form);
 
-var _vipForm = __webpack_require__(9);
+var _vipForm = __webpack_require__(8);
 
 var _vipForm2 = _interopRequireDefault(_vipForm);
 
-var _landingUtil = __webpack_require__(8);
+var _landingUtil = __webpack_require__(9);
 
 var _landingUtil2 = _interopRequireDefault(_landingUtil);
 
@@ -10946,47 +10946,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 exports.default = function () {
-  var $formContents = $('.form-element');
-  var $formLanding = $('.form-landing, .is-form-el');
-
-  var calcHeights = function calcHeights() {
-    $formLanding.css({
-      'min-height': $formContents.outerHeight() + 50
-    });
-  };
-
-  calcHeights();
-
-  var resizeTimeout = null;
-  var doResizeTimeout = function doResizeTimeout() {
-    resizeTimeout = setTimeout(function () {
-      calcHeights();
-    }, 400);
-  },
-      doResizeHandler = function doResizeHandler() {
-    if (resizeTimeout !== null) {
-      clearTimeout(resizeTimeout);
-    }
-    doResizeTimeout();
-  };
-
-  window.onresize = function () {
-    return doResizeHandler();
-  };
-};
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports.default = function () {
   ;(function ($) {
     var $url = 'https://hooks.zapier.com/hooks/catch/2061966/qcxthf/';
 
@@ -11033,6 +10992,47 @@ exports.default = function () {
       return sendForm(e);
     });
   })(jQuery);
+};
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function () {
+  var $formContents = $('.form-element');
+  var $formLanding = $('.form-landing, .is-form-el');
+
+  var calcHeights = function calcHeights() {
+    $formLanding.css({
+      'min-height': $formContents.outerHeight() + 50
+    });
+  };
+
+  calcHeights();
+
+  var resizeTimeout = null;
+  var doResizeTimeout = function doResizeTimeout() {
+    resizeTimeout = setTimeout(function () {
+      calcHeights();
+    }, 400);
+  },
+      doResizeHandler = function doResizeHandler() {
+    if (resizeTimeout !== null) {
+      clearTimeout(resizeTimeout);
+    }
+    doResizeTimeout();
+  };
+
+  window.onresize = function () {
+    return doResizeHandler();
+  };
 };
 
 /***/ })

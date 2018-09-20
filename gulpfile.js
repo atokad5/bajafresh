@@ -61,7 +61,7 @@ gulp.task('webpack', () => {
 
 gulp.task('server', () => {
   browsersync.init({
-    proxy: 'http://localhost:8888/baja'
+    proxy: 'http://baja:8888/'
   }, (err, bs) => {
     //qrcode.generate('http://'+bs.utils.devIp[0]+':3000');
   });
