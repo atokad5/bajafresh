@@ -18,7 +18,7 @@
 
 
 
-<main class="site-container">
+<main class="site-container imheresitecontainer">
 
 	<?php if($homePage){ ;?>
 	<div class="fixed-nav">
