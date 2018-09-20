@@ -3,5 +3,5 @@
 <li><a class="slide_link" href="#venue">The Venue</a></li>
 <li><a class="slide_link" href="#location">Location</a></li>
 <li><a class="slide_link" href="#faqs">Faq's</a></li>
-<li><a href="<?php echo site_url('/news');?>">News</a></li>
+<!-- <li><a href="<?php echo site_url('/news');?>">News</a></li> -->
 <!-- <li><a href="mailto:support@bajabeachfest.com">Contact</a></li> -->

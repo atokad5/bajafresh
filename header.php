@@ -50,7 +50,13 @@
 					<img src="<?php the_field('header_logo', 'options'); ?>" alt="">
 				</div>
 				<div class="hero-title">
-					<!-- <h1 class="the-title"><?php the_field('header_text', 'options') ;?></h1> -->
+					<?php 
+						$checker = get_field('header_text', 'options');
+
+						if($checker) {
+					?>
+					<h1 class="the-title"><?php the_field('header_text', 'options') ;?></h1>
+						<?php } ?>
 				</div>
 				<?php $showArtist = get_field('show_featured_artist', 'options');
 						if($showArtist) {
