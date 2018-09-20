@@ -19,16 +19,16 @@
  <!-- / sharing -->
 
 <?php } ;?>
-
+<div class="lineup-modal">
+		<div class="line-up-modal-inner">
+			<img src="<?php the_field('banner_image', 'options');?>" alt="">
+			<button class="close-lineup lineup_link">
+				<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+			</button>
+		</div>
+	</div>
 <?php if($homePage) { ;?>
- <div class="lineup-modal">
- 	<div class="line-up-modal-inner">
- 		<img src="<?php the_field('banner_image', 'options');?>" alt="">
- 		<button class="close-lineup lineup_link">
- 			<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
- 		</button>
- 	</div>
- </div>
+ 
 
 
 
@@ -111,13 +111,13 @@
 			</figure>
 		</div>
 	
-		<?php if($homePage) { ;?>
+		
 			<div class="footer-nav">
 				<ul class="footer-li">
 					<?php get_template_part('includes/nav') ;?>
 				</ul>
 			</div>
-		<?php } ;?>
+		
 
 		<?php $spons = get_field('show_sponsors', 'options'); ?>
 
