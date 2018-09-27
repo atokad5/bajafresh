@@ -1,10 +1,17 @@
 export default function() {
   ;(function($) {
    let $url ='https://hooks.zapier.com/hooks/catch/2061966/qt602h';
-  
    let $form = $('.form');
    let $email = $('.email-el');
    let $msg = $('.msg');
+   let $body = $('body');
+
+  
+
+
+
+
+
    const sendForm = e => {
      e.preventDefault();
      $.ajax({

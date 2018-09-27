@@ -8,6 +8,31 @@ export default function() {
    let $lastName = $('.last_name');
    let $email = $('.email_add');
    let $formNumber = $('.number_');
+
+   let $dropDown = $('.drop-down');
+   let $groupCount = 2;
+   let $groupNum = $dropDown.find('li');
+   let $groupInput = $('.groupSize');
+   let $groupShow = $('.guest-count')
+
+   let injectNumber = e => {
+    let $t = $(e.currentTarget);
+    let $number = $t.text();
+    $groupInput.attr('value', $number);
+    $groupShow.html(`${$number} in your group`);
+
+    console.log($number);
+   }
+
+
+   $groupNum.on('click', injectNumber)
+   $dropDown.on('click', () => $('.drop-down-inner').slideToggle(150));
+
+
+
+
+
+
    
 
    const sendForm = e => {
@@ -20,6 +45,7 @@ export default function() {
         'ordernumber': $orderNumber.val(),
         'firstname': $firstName.val(),
         'lastname': $lastName.val(),
+        'groupsize': $groupInput.val(),
         'email': $email.val(),
         'phonenumber': $formNumber.val()
        },

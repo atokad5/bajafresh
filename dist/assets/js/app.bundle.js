@@ -10906,10 +10906,11 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = function () {
   ;(function ($) {
     var $url = 'https://hooks.zapier.com/hooks/catch/2061966/qt602h';
-
     var $form = $('.form');
     var $email = $('.email-el');
     var $msg = $('.msg');
+    var $body = $('body');
+
     var sendForm = function sendForm(e) {
       e.preventDefault();
       $.ajax({
@@ -10956,6 +10957,26 @@ exports.default = function () {
     var $email = $('.email_add');
     var $formNumber = $('.number_');
 
+    var $dropDown = $('.drop-down');
+    var $groupCount = 2;
+    var $groupNum = $dropDown.find('li');
+    var $groupInput = $('.groupSize');
+    var $groupShow = $('.guest-count');
+
+    var injectNumber = function injectNumber(e) {
+      var $t = $(e.currentTarget);
+      var $number = $t.text();
+      $groupInput.attr('value', $number);
+      $groupShow.html($number + ' in your group');
+
+      console.log($number);
+    };
+
+    $groupNum.on('click', injectNumber);
+    $dropDown.on('click', function () {
+      return $('.drop-down-inner').slideToggle(150);
+    });
+
     var sendForm = function sendForm(e) {
       e.preventDefault();
       var $urlDest = $(e.currentTarget).attr('data-url');
@@ -10966,6 +10987,7 @@ exports.default = function () {
           'ordernumber': $orderNumber.val(),
           'firstname': $firstName.val(),
           'lastname': $lastName.val(),
+          'groupsize': $groupInput.val(),
           'email': $email.val(),
           'phonenumber': $formNumber.val()
         },
