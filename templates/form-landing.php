@@ -35,6 +35,25 @@ $root = get_template_directory_uri();
           <input type="email" class="email_add" placeholder="Email Address" required>
         </div>
         <div class="input-field">
+          <div class="drop-down">
+            <span class="guest-count">Guest Count in Your Party</span>
+            <div class="drop-down-inner">
+              <ul>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>     
+                <li>8</li>     
+                <li>9</li>
+                <li>9+</li>          
+              </ul>
+            </div>
+          </div>
+          <input class="groupSize" type="text" id="drop-down" required style="display: none;" value="">
+        </div>
+        <div class="input-field">
           <input type="tel" class="number_" placeholder="Phone Number" required>
         </div>
         <div class="input-field is-center">

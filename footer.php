@@ -260,7 +260,7 @@
 
 </script>
 
-<script src="<?php echo "$root/dist/assets/js/app.bundle.js?fwa=gsaew" ?>"></script>
+<script src="<?php echo "$root/dist/assets/js/app.bundle.js?a=saew" ?>"></script>
 <?php  wp_footer();  ?>
 </body>
 </html>
