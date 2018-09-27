@@ -8,7 +8,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title><?php wp_title(''); ?></title>
-	<link rel="stylesheet" href="<?php echo "$root/dist/assets/css/style.css?fwaw=fwa"; ?>">
+	<link rel="stylesheet" href="<?php echo "$root/dist/assets/css/style.css?w=a"; ?>">
 	<meta name="viewport" content="Width=device-width, initial-scale=1, user-scalable=no">
 	<script src="https://use.fontawesome.com/1eda73ce4d.js"></script>
 	<?php wp_head(); ?>
